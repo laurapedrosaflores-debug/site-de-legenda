@@ -946,3 +946,136 @@ nav {
     display: none;
   }
 }
+/* Reset básico para garantir consistência */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Adicionando uma altura mínima apenas para empurrar o footer para baixo na visualização vazia */
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* Estilos Globais do Footer */
+.footer {
+    background-color: #0c1a2c; /* Cor azul escuro do fundo */
+    padding: 50px 20px 30px; /* Espaçamento interno superior, lateral e inferior */
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1200px; /* Largura máxima para alinhar com o conteúdo do site */
+}
+
+/* --- Parte Superior (Logo e Texto) --- */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 30px;
+    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.play-icon {
+    background-color: #20d4b4; /* Cor verde-água do ícone */
+    color: #0c1a2c; /* Cor da seta de play (igual ao fundo do footer) */
+    width: 36px;
+    height: 36px;
+    border-radius: 6px; /* Bordas arredondadas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-icon svg {
+    width: 20px;
+    height: 20px;
+    margin-left: 3px; /* Pequeno ajuste visual para a seta parecer centralizada */
+}
+
+.footer-brand h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.footer-mission {
+    max-width: 550px; /* Limita a largura do texto descritivo */
+}
+
+.footer-mission p {
+    color: #7b8eaf; /* Cor azul-acinzentada do texto secundário */
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* --- Linha Divisória --- */
+.footer-divider {
+    border: none;
+    height: 1px;
+    background-color: #1e3048; /* Cor sutil para a linha */
+    margin-bottom: 25px;
+}
+
+/* --- Parte Inferior (Copyright e Links) --- */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-copyright p {
+    color: #7b8eaf;
+    font-size: 0.85rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-links a {
+    color: #7b8eaf;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff; /* Fica branco ao passar o mouse */
+}
+
+/* --- Responsividade (Smartphones e Tablets) --- */
+@media (max-width: 850px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-bottom {
+        flex-direction: column-reverse; /* Coloca os links acima do copyright no celular */
+        align-items: flex-start;
+    }
+    
+    .footer-links {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
