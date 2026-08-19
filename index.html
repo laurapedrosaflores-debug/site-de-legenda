@@ -1,85 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Player de Vídeo e Transcrição</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player Acessível</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
-    <div class="ui-wrapper">
-        
-        <!-- Cartão Principal -->
-        <div class="player-card">
-            
-            <!-- Área do Vídeo -->
-            <div class="video-section">
-                <!-- Imagem de placeholder simulando o vídeo -->
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Pessoas trabalhando juntas" class="video-thumbnail">
-                <div class="video-overlay"></div>
-                
-                <!-- Botão Play Central -->
-                <button class="play-button">
-                    <svg viewBox="0 0 24 24" class="play-icon" fill="currentColor">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </button>
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-icon">▶</span>
+      <span class="logo-text">Player Acessível</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#problema">O Problema</a>
+      <a href="#como-funciona">Como Funciona</a>
+      <a href="#beneficios">Benefícios</a>
+      <a href="#comecar" class="btn-nav">Começar Agora</a>
+    </nav>
+  </header>
 
-                <!-- Legenda sobre o vídeo -->
-                <div class="caption-bar">
-                    <p>"...a inclusão digital é um direito fundamental de todos..."</p>
-                </div>
-            </div>
+  <main class="hero-container">
+    
+    <div class="hero-content">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        100% gratuito • sem downloads • funciona agora
+      </div>
 
-            <!-- Controles do Player -->
-            <div class="controls-section">
-                <!-- Ícone de Acessibilidade -->
-                <button class="icon-button accessibility-btn">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <!-- Ícone de acessibilidade simplificado -->
-                        <path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z"/>
-                    </svg>
-                </button>
-                
-                <!-- Barra de Progresso -->
-                <div class="progress-container">
-                    <div class="progress-track">
-                        <div class="progress-fill"></div>
-                    </div>
-                </div>
-                
-                <!-- Tempo -->
-                <div class="time-display">2:14 / 5:32</div>
-            </div>
+      <h1 class="hero-title">
+        Acesse qualquer vídeo. <span class="highlight">Sem barreiras.</span>
+      </h1>
 
-            <!-- Caixa de Status de Transcrição -->
-            <div class="transcription-status">
-                <div class="check-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                </div>
-                <div class="status-content">
-                    <h4>Transcrição ativa</h4>
-                    <p>IA processou 847 palavras — precisão 98.4%</p>
-                </div>
-            </div>
+      <p class="hero-description">
+        Transcrição instantânea por IA — basta colar o link. Sem aplicativos pesados, sem dependência de terceiros, sem atrito. Conhecimento acessível para todos, em qualquer lugar.
+      </p>
 
-        </div>
-
-        <!-- Badge Flutuante (Funciona sem áudio) -->
-        <div class="floating-badge">
-            <svg viewBox="0 0 24 24" fill="currentColor" class="mute-icon">
-                <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
-            </svg>
-            <span>Funciona sem áudio</span>
-        </div>
-
+      <div class="hero-buttons">
+        <a href="#" class="btn-primary">Comece a usar agora &rarr;</a>
+        <a href="#" class="btn-secondary">Conheça a história</a>
+      </div>
     </div>
 
-</body>
-</html>
+    <div class="player-wrapper">
+      <div class="player-card">
+        
+        <div class="video-preview">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Pessoas estudando juntas no notebook">
+          <div class="play-button">
+            <span>▶</span>
+          </div>
+          <div class="subtitle-overlay">
+            "...a inclusão digital é um direito fundamental de todos..."
+          </div>
+        </div>
+
+        <div class="player-controls">
+          <span class="accessibility-icon">♿</span>
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+          </div>
+          <span class="time-display">2:14 / 5:32</span>
+        </div>
+
+        <div class="status-box">
+          <div class="status-icon">✓</div>
+          <div class="status-info">
+            <strong>Transcrição ativa</strong>
+            <p>IA processou 847 palavras — precisão 98.4%</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="floating-tag">
+        <span class="sound-off-icon">🔇</span>
+        <span>Funciona sem áudio</span>
+      </div>
+    </div>
+
+  </main>
+  <header>
+    <div class="container">
+  
+    </div>
+  </header>
 
   <main class="container">
     <!-- Seção de Métricas -->
